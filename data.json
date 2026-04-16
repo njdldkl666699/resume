@@ -1,0 +1,110 @@
+{
+  "profile": {
+    "name": "张晨曦",
+    "role": "前端开发工程师 / UI 工程化",
+    "summary": "3 年前端开发经验，专注于 Vue / TypeScript / 可视化交互。擅长把复杂业务抽象成可维护组件，注重性能、可访问性与设计还原。"
+  },
+  "contact": {
+    "title": "联系方式",
+    "icon": "fa-solid fa-address-card",
+    "items": [
+      {
+        "icon": "fa-solid fa-phone",
+        "label": "电话",
+        "value": "138-0000-1234"
+      },
+      {
+        "icon": "fa-solid fa-envelope",
+        "label": "邮箱",
+        "value": "chenxi@example.com"
+      },
+      {
+        "icon": "fa-solid fa-location-dot",
+        "label": "城市",
+        "value": "上海"
+      },
+      {
+        "icon": "fa-brands fa-github",
+        "label": "GitHub",
+        "value": "github.com/chenxi"
+      }
+    ]
+  },
+  "workExperience": {
+    "title": "工作经历",
+    "items": [
+      {
+        "title": "某科技有限公司 · 前端开发工程师",
+        "meta": "2023.04 - 至今",
+        "highlights": [
+          "负责 B 端运营平台重构，首屏加载时间降低 42%。",
+          "搭建通用表单渲染引擎，覆盖 12+ 业务场景，研发效率提升约 35%。",
+          "推动 ESLint + Stylelint + CI 检查流程，线上样式问题下降 60% 以上。"
+        ]
+      },
+      {
+        "title": "某数字创意工作室 · 前端工程师",
+        "meta": "2021.07 - 2023.03",
+        "highlights": [
+          "参与品牌官网与活动专题开发，完成 20+ 落地页交付。",
+          "主导组件库主题系统建设，支持多品牌快速换肤。"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "项目经验",
+    "items": [
+      {
+        "title": "数据驾驶舱系统",
+        "meta": "Vue3 / ECharts / TypeScript",
+        "highlights": [
+          "搭建图表联动与过滤体系，交互响应时间稳定在 100ms 以内。",
+          "实现图层化地图渲染，支持多维指标切换与导出。"
+        ]
+      },
+      {
+        "title": "低代码表单平台",
+        "meta": "Vue3 / Pinia / Vite",
+        "highlights": [
+          "设计 schema 渲染协议，支持 30+ 字段组件组合编排。",
+          "引入按需加载和虚拟列表，复杂页面渲染耗时减少约 38%。"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "技能标签",
+    "icon": "fa-solid fa-code",
+    "items": [
+      "HTML5 / CSS3",
+      "JavaScript",
+      "TypeScript",
+      "Vue3",
+      "React",
+      "Vite",
+      "Node.js",
+      "ECharts",
+      "Figma"
+    ]
+  },
+  "education": {
+    "title": "教育背景",
+    "icon": "fa-solid fa-graduation-cap",
+    "school": "华东师范大学 · 软件工程本科",
+    "duration": "2017.09 - 2021.06"
+  },
+  "strengths": {
+    "title": "个人优势",
+    "items": [
+      "重视设计细节，能准确还原视觉稿并优化交互体验。",
+      "具备组件化思维，注重代码规范与长期维护成本。",
+      "沟通协作顺畅，可独立推进需求从评审到上线。"
+    ]
+  },
+  "languages": {
+    "title": "语言能力",
+    "icon": "fa-solid fa-language",
+    "text": "中文（母语） / 英语（CET-6）"
+  }
+}

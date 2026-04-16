@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>单页简历 - A4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=ZCOOL+XiaoWei&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main class="paper" aria-label="简历页面">
+    <div class="upload-toolbar" aria-label="自定义数据上传工具">
+      <input id="custom-file-input" type="file" accept="application/json,.json" hidden />
+      <button id="upload-custom-btn" type="button">
+        <i class="fa-solid fa-file-arrow-up" aria-hidden="true"></i>
+        上传 data-custom.json
+      </button>
+      <span id="upload-status" aria-live="polite"></span>
+    </div>
+
+    <header class="hero">
+      <div class="hero-text">
+        <h1 id="profile-name"></h1>
+        <p class="role" id="profile-role"></p>
+        <p class="summary" id="profile-summary"></p>
+      </div>
+      <aside class="contact-card">
+        <h2 id="contact-title"></h2>
+        <ul id="contact-list"></ul>
+      </aside>
+    </header>
+
+    <section class="grid">
+      <div class="left-column">
+        <article class="section">
+          <h3 id="work-title"></h3>
+          <div id="work-list"></div>
+        </article>
+
+        <article class="section">
+          <h3 id="project-title"></h3>
+          <div id="project-list"></div>
+        </article>
+      </div>
+
+      <div class="right-column">
+        <article class="section compact">
+          <h3 id="skills-title"></h3>
+          <div class="chips" id="skills-list"></div>
+        </article>
+
+        <article class="section compact">
+          <h3 id="education-title"></h3>
+          <p class="single-line" id="education-school"></p>
+          <p class="single-line muted" id="education-duration"></p>
+        </article>
+
+        <article class="section compact">
+          <h3 id="strengths-title"></h3>
+          <ul id="strengths-list"></ul>
+        </article>
+
+        <article class="section compact">
+          <h3 id="languages-title"></h3>
+          <p class="single-line" id="languages-text"></p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
