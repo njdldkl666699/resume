@@ -49,19 +49,27 @@ body {
 }
 
 .upload-toolbar {
-  position: absolute;
-  top: 4.2mm;
-  right: 4.2mm;
+  position: relative;
   z-index: 3;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 2mm;
-  max-width: 92mm;
-  padding: 1.8mm 2.2mm;
+  justify-content: space-between;
+  gap: 1.8mm;
+  width: 100%;
+  margin-bottom: 4.5mm;
+  padding: 2.2mm;
   border-radius: 3mm;
   border: 1px solid rgba(31, 94, 91, 0.18);
   background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(2px);
+}
+
+.upload-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.2mm;
+  flex-wrap: nowrap;
 }
 
 .upload-toolbar button {
@@ -83,11 +91,14 @@ body {
 }
 
 #upload-status {
-  font-size: 2.8mm;
-  color: #5d6772;
+  margin-left: auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 48%;
+  font-size: 2.8mm;
+  color: #5d6772;
+  text-align: right;
 }
 
 #upload-status.status-success {
@@ -136,11 +147,12 @@ body {
 }
 
 .hero-text {
-  flex: 1.7;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .contact-card {
-  flex: 1;
+  flex: 0 0 auto;
 }
 
 h1,
@@ -176,11 +188,20 @@ h1 {
 }
 
 .contact-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4mm;
   background: var(--card);
   border: 1px solid rgba(31, 94, 91, 0.18);
   border-radius: 4mm;
   padding: 4mm 5mm;
   backdrop-filter: blur(1.6px);
+}
+
+.contact-main {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .contact-card h2 {
@@ -210,12 +231,22 @@ h1 {
   display: flex;
   align-items: center;
   gap: 1.7mm;
+  white-space: nowrap;
 }
 
 .contact-card li i {
   width: 4mm;
   text-align: center;
   color: #2a6764;
+}
+
+.photo-slot {
+  width: 25mm;
+  height: 35mm;
+  flex: 0 0 25mm;
+  border: 1px dashed rgba(31, 94, 91, 0.42);
+  border-radius: 1.8mm;
+  background: linear-gradient(145deg, rgba(31, 94, 91, 0.08), rgba(31, 94, 91, 0.02));
 }
 
 .grid {
@@ -235,7 +266,8 @@ h1 {
 @supports (display: grid) {
   .hero {
     display: grid;
-    grid-template-columns: 1.7fr 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
   }
 
   .grid {
@@ -372,14 +404,24 @@ h1 {
     max-width: none;
   }
 
+  .contact-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
   .upload-toolbar {
     position: static;
-    margin-bottom: 4mm;
+    margin-bottom: 4.5mm;
     max-width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .upload-actions {
+    flex-shrink: 0;
   }
 
   #upload-status {
-    max-width: 48vw;
+    max-width: 42%;
   }
 }
 
@@ -424,7 +466,7 @@ h1 {
 
   @supports (display: grid) {
     .hero {
-      grid-template-columns: 1.7fr 1fr;
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 8mm;
     }
 

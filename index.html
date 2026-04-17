@@ -18,10 +18,16 @@
   <main class="paper" aria-label="简历页面">
     <div class="upload-toolbar" aria-label="自定义数据上传工具">
       <input id="custom-file-input" type="file" accept="application/json,.json" hidden />
-      <button id="upload-custom-btn" type="button">
-        <i class="fa-solid fa-file-arrow-up" aria-hidden="true"></i>
-        上传 data-custom.json
-      </button>
+      <div class="upload-actions">
+        <button id="download-template-btn" type="button">
+          <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+          下载 data.json 模板
+        </button>
+        <button id="upload-custom-btn" type="button">
+          <i class="fa-solid fa-file-arrow-up" aria-hidden="true"></i>
+          上传 data-custom.json
+        </button>
+      </div>
       <span id="upload-status" aria-live="polite"></span>
     </div>
 
@@ -32,8 +38,11 @@
         <p class="summary" id="profile-summary"></p>
       </div>
       <aside class="contact-card">
-        <h2 id="contact-title"></h2>
-        <ul id="contact-list"></ul>
+        <div class="contact-main">
+          <h2 id="contact-title"></h2>
+          <ul id="contact-list"></ul>
+        </div>
+        <div class="photo-slot" aria-label="照片预留区域"></div>
       </aside>
     </header>
 

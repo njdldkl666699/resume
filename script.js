@@ -152,11 +152,28 @@ async function fetchJson(path, required) {
 
 function bindUpload(baseData) {
   const uploadButton = document.getElementById("upload-custom-btn");
+  const downloadButton = document.getElementById("download-template-btn");
   const fileInput = document.getElementById("custom-file-input");
 
-  if (!uploadButton || !fileInput) {
+  if (!uploadButton || !downloadButton || !fileInput) {
     return;
   }
+
+  downloadButton.addEventListener("click", () => {
+    const jsonText = JSON.stringify(baseData, null, 2);
+    const blob = new Blob([jsonText], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "data-custom.json";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+
+    setUploadStatus("已下载模板：data-custom.json", "success");
+  });
 
   uploadButton.addEventListener("click", () => {
     fileInput.click();
