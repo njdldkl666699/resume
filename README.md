@@ -47,7 +47,7 @@
 - `skills`：技能标签
 - `education`：教育背景
 - `strengths`：个人优势
-- `languages`：语言能力
+- `languages`：语言能力（`text` 支持换行符 `\n` 与 HTML 标签，如 `<b>`、`<span>`）
 
 ### 图标配置
 

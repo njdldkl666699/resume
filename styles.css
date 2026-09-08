@@ -141,8 +141,9 @@ body {
 
 .hero {
   display: flex;
-  gap: 8mm;
-  padding-bottom: 6mm;
+  gap: 6mm;
+  margin-top: -4mm;
+  padding-bottom: 4mm;
   border-bottom: 1px solid var(--line);
 }
 
@@ -181,21 +182,21 @@ h1 {
 
 .summary {
   margin-top: 4mm;
-  font-size: 3.7mm;
+  font-size: 3.5mm;
   line-height: 1.65;
   color: var(--muted);
-  max-width: 122mm;
+  max-width: 130mm;
 }
 
 .contact-card {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 4mm;
+  gap: 3mm;
   background: var(--card);
   border: 1px solid rgba(31, 94, 91, 0.18);
   border-radius: 4mm;
-  padding: 4mm 5mm;
+  padding: 3.2mm 4mm;
   backdrop-filter: blur(1.6px);
 }
 
@@ -241,16 +242,16 @@ h1 {
 }
 
 .photo-slot {
-  width: 25mm;
-  height: 35mm;
-  flex: 0 0 25mm;
+  width: 21mm;
+  height: 30mm;
+  flex: 0 0 21mm;
   border: 1px dashed rgba(31, 94, 91, 0.42);
   border-radius: 1.8mm;
   background: linear-gradient(145deg, rgba(31, 94, 91, 0.08), rgba(31, 94, 91, 0.02));
 }
 
 .grid {
-  margin-top: 6mm;
+  margin-top: 4mm;
   display: flex;
   gap: 7mm;
 }
@@ -277,8 +278,8 @@ h1 {
 }
 
 .section {
-  margin-bottom: 5.6mm;
-  padding-bottom: 4.6mm;
+  margin-bottom: 3.4mm;
+  padding-bottom: 3mm;
   border-bottom: 1px dashed rgba(31, 94, 91, 0.22);
 }
 
@@ -343,10 +344,16 @@ h1 {
   line-height: 1.58;
 }
 
-.compact .single-line {
+.compact .single-line,
+.compact .multi-line {
   font-size: 3.5mm;
   color: #37404a;
   line-height: 1.65;
+}
+
+.compact .multi-line {
+  white-space: pre-line;
+  word-break: break-word;
 }
 
 .muted {
@@ -467,7 +474,7 @@ h1 {
   @supports (display: grid) {
     .hero {
       grid-template-columns: minmax(0, 1fr) auto;
-      gap: 8mm;
+      gap: 6mm;
     }
 
     .grid {

@@ -5,6 +5,13 @@ function setText(id, text) {
   }
 }
 
+function setHtml(id, html) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.innerHTML = html || "";
+  }
+}
+
 function setTitle(id, title, iconClass) {
   const el = document.getElementById(id);
   if (!el) {
@@ -35,7 +42,7 @@ function renderItems(containerId, items) {
         <ul>
           ${(item.highlights || []).map((text) => `<li>${text}</li>`).join("")}
         </ul>
-      </div>`
+      </div>`,
     )
     .join("");
 }
@@ -51,7 +58,7 @@ function renderContact(contact) {
   list.innerHTML = (contact.items || [])
     .map(
       (item) =>
-        `<li><i class="${item.icon || ""}" aria-hidden="true"></i> ${item.label || ""}：${item.value || ""}</li>`
+        `<li><i class="${item.icon || ""}" aria-hidden="true"></i> ${item.label || ""}：${item.value || ""}</li>`,
     )
     .join("");
 }
@@ -100,7 +107,7 @@ function renderPage(data) {
   renderStrengths(data.strengths || {});
 
   setTitle("languages-title", data.languages?.title, data.languages?.icon);
-  setText("languages-text", data.languages?.text);
+  setHtml("languages-text", data.languages?.text);
 }
 
 function setUploadStatus(message, type) {
@@ -193,7 +200,10 @@ function bindUpload(baseData) {
       const mergedData = mergeData(baseData, customData);
 
       renderPage(mergedData);
-      setUploadStatus(`已加载 ${file.name}` + (file.name === "data-custom.json" ? "" : "（建议命名为 data-custom.json）"), "success");
+      setUploadStatus(
+        `已加载 ${file.name}` + (file.name === "data-custom.json" ? "" : "（建议命名为 data-custom.json）"),
+        "success",
+      );
     } catch (error) {
       console.error(error);
       setUploadStatus("上传失败：JSON 格式无效", "error");
