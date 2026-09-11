@@ -21,8 +21,7 @@ body {
   padding: 0;
   background:
     radial-gradient(circle at 20% 10%, #ffe9c5 0%, transparent 45%),
-    radial-gradient(circle at 80% 80%, #d3ebe8 0%, transparent 50%),
-    var(--bg);
+    radial-gradient(circle at 80% 80%, #d3ebe8 0%, transparent 50%), var(--bg);
   color: var(--ink);
   font-family: "Outfit", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -37,8 +36,7 @@ body {
 .paper {
   width: var(--paper-width);
   min-height: var(--paper-height);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.86));
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.86));
   border: 1px solid rgba(31, 94, 91, 0.22);
   box-shadow:
     0 22px 48px rgba(15, 24, 35, 0.18),
@@ -313,7 +311,7 @@ h1 {
   margin-left: 2.4mm;
 }
 
-.item+.item {
+.item + .item {
   margin-top: 3.2mm;
 }
 
@@ -396,7 +394,6 @@ h1 {
   }
 
   @supports (display: grid) {
-
     .hero,
     .grid {
       grid-template-columns: 1fr;
